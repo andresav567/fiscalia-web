@@ -18,8 +18,8 @@ import { TrialModelComponent } from './trial-model/trial-model.component';
 import { TrialStageComponent } from './trial-stage/trial-stage.component';
 import { TrialTeamComponent } from './trial-team/trial-team.component';
 import { ActivityComponent } from './activity/activity.component';
-
-
+import { FormsModule } from '@angular/forms';
+import { MaterialModule } from 'src/app/material/material.module';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,9 @@ import { ActivityComponent } from './activity/activity.component';
     ActivityComponent],
 
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule,
+    FormsModule
   ],
   exports: [
     CityComponent,
@@ -64,6 +66,7 @@ import { ActivityComponent } from './activity/activity.component';
     TrialStageComponent,
     TrialTeamComponent,
     ActivityComponent,
+
   ]
 })
 

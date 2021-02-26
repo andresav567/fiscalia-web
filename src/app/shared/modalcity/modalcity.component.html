@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Nueva ciudad</h1>
+<div mat-dialog-content>
+    <p>Complete los datos:</p>
+    <mat-form-field>
+        <mat-label>City Code</mat-label>
+        <input matInput [(ngModel)]="data.citycode">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>City Name</mat-label>
+        <input matInput [(ngModel)]="data.cityname">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Status</mat-label>
+        <input matInput [(ngModel)]="data.status">
+    </mat-form-field>
+</div>
+
+
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancelar</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Guardar</button>
+</div>

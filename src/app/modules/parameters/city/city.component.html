@@ -1,1 +1,58 @@
-<p>city works!</p>
+<div class="container">
+    <div class=" header">
+        <h1>Ciudades</h1>
+    </div>
+    <div>
+        <button mat-raised-button color="primary" (click)="openDialog()">tocame</button>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="cityId">
+                <th mat-header-cell *matHeaderCellDef> cityId </th>
+                <td mat-cell *matCellDef="let element"> {{element.cityId}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="cityCode">
+                <th mat-header-cell *matHeaderCellDef> cityCode </th>
+                <td mat-cell *matCellDef="let element"> {{element.cityCode}} </td>
+            </ng-container>
+            <!-- Weight Column -->
+            <ng-container matColumnDef="countryId">
+                <th mat-header-cell *matHeaderCellDef> countryId </th>
+                <td mat-cell *matCellDef="let element"> {{element.countryId}} </td>
+            </ng-container>
+            <!-- Weight Column -->
+            <ng-container matColumnDef="Province">
+                <th mat-header-cell *matHeaderCellDef> provinceCode </th>
+                <td mat-cell *matCellDef="let element"> {{element.province.provinceCode}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="cityName">
+                <th mat-header-cell *matHeaderCellDef> cityName </th>
+                <td mat-cell *matCellDef="let element"> {{element.cityName}} </td>
+            </ng-container>
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef> status </th>
+                <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+            </ng-container>
+            <ng-container matColumnDef="ACCION">
+                <th mat-header-cell *matHeaderCellDef> </th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-mini-fab color="primary" (click)="modificar()"
+                        aria-label="Example icon button with a home icon">
+                        <mat-icon>home</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+    </div>
+</div>

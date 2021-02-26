@@ -9,7 +9,7 @@ import { UtilsModule } from './utils/utils.module';
 import { SharedModule } from './shared/shared.module';
 import { ModulesModule } from './modules/modules.module';
 import { ParametersModule } from './modules/parameters/parameters.module';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent
@@ -23,7 +23,8 @@ import { ParametersModule } from './modules/parameters/parameters.module';
     UtilsModule,
     SharedModule,
     ModulesModule,
-    ParametersModule
+    ParametersModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
