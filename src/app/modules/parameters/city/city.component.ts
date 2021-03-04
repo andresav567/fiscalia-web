@@ -37,7 +37,7 @@ export class CityComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(ModalcityComponent, {
       width: '250px',
-      data: { provinceid: this.provinceid }
+      data: { provinceid: this.provinceid}
     });
 
     dialogRef.afterClosed().subscribe(result => {
